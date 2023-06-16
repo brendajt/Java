@@ -247,3 +247,123 @@
                    }
                }   
 
+
+
+
+### Se realizo el Código de la evaluación del moodle del 16/06/2023
+
+         import java.util.Scanner;
+         public class Instrucciones{
+             public static void main(String[] args){
+                 Scanner sc=new Scanner(System.in);
+                 System.out.println("Inroduce un número del 1 al 7 para conocer el día de la semana");
+                 int dia=sc.nextInt();
+                 sc.nextLine();
+                 switch(dia){
+                     case 1:
+                         System.out.print("El día es Lunes");
+                         break;
+                     case 2:
+                         System.out.print("El día es Martes");
+                         break;
+                     case 3:
+                         System.out.print("El día es Miércoles");
+                         break;
+                     case 4:
+                         System.out.print("El día es Jueves");
+                         break;
+                     case 5:
+                         System.out.print("El día es Viernes");
+                         break;
+                     case 6:
+                         System.out.print("El día es Sabado");
+                         break;
+                     case 7:
+                         System.out.print("El días es Domingo");
+                         break;
+                     default:
+                         System.out.println("No es valido este dato");                    
+                 }
+             }
+         }
+
+
+### Se termino el programa Case.java
+
+            import java.util.Scanner;
+            public class Case{
+                public static void main(String[] args){
+                    //int a\u00f1o=2023;  // Se utilizo el unicode de la "ñ" que es \u00f1 
+                    //System.out.println("Estamos en el año " + año);
+                    Scanner sc= new Scanner(System.in);
+                    int mes, a\u00f1o;
+                    String palabra_secreta="PILARES";
+                    System.out.print("Ingresa la palabra secreta para acceder ");
+                    String palabra_usuario=sc.nextLine();
+                    if(palabra_secreta.equalsIgnoreCase(palabra_usuario)){
+                        System.out.println("Bienvenido al Case");
+                        int numero_aleatorio=(int)(Math.random()*3+1);
+                        System.out.println("Tu numero aleatorio es:" + numero_aleatorio);
+                        switch(numero_aleatorio){
+                            case 1:
+                                System.out.println("Programa que dice numero de días de un mes seleccionado");
+                                System.out.println("¿Que año es?");
+                                a\u00f1o=sc.nextInt();
+                                System.out.println("Ingresa el numero del mes del 1 al 12: ");
+                                mes=sc.nextInt();
+                                sc.nextLine();
+                                
+                                switch(mes){
+                                    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                                        System.out.print("El mes " + mes + " tiene 31 días");
+                                        break;
+                                    case 4: case 6: case 9: case 11:
+                                        System.out.print("El mes " + mes + " tiene 30 días");
+                                        break;
+                                    case 2:
+                                        if(a\u00f1o%4==0 && a\u00f1o%100!=0){
+                                            System.out.print("El mes tiene 29 días");
+                                        }else{
+                                            System.out.print("El mes solo tiene 28 días");
+                                        }
+                                        break;
+                                    default:
+                                        System.out.println("No es valido este dato");
+                        
+                            
+                                }
+                                break;
+                            case 2:
+                                System.out.println("Programa que te dice si tu año es bisiesto");
+                                System.out.println("Ingresa el año: ");
+                                a\u00f1o=sc.nextInt();
+                                sc.nextLine();
+                                if(a\u00f1o%4==0 && a\u00f1o%100!=0){
+                                    System.out.println("El año "  + a\u00f1o  +  " SI es bisiesto");
+                                }else{
+                                    System.out.println("El año "  + a\u00f1o  +  " NO es bisiesto");
+                                }
+                                break;
+                            case 3:
+                                // Para el caso 3 haremos un arreglo 
+                                System.out.println("Programa que dice número de mes ingresado del 1 al 12");
+                                String[] meses={"enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"};
+                                System.out.println("Ingresa un mes:");
+                                String mes_ingresado=sc.nextLine();
+                                int posicion=1;
+                                for(int i= 0; i<meses.length;i++){
+                                    if(meses[i].equals(mes_ingresado)){
+                                        System.out.println("Para el mes "+ mes_ingresado + " le corresponde el número: " + posicion);
+                                    }else{
+                                        posicion++;
+                                    }
+                                }
+                                    
+                                
+                            break;    
+                        }
+                    }else{
+                        System.out.println("No es correcta la palabra");
+                    }
+                }
+            }

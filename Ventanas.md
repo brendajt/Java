@@ -112,3 +112,30 @@
             boton1.setResizable(false);
         }
     }
+
+
+## Codigo de pilas
+
+    import java.util.Stack;
+    public class Camisas{
+        public static void main(String[] args){
+        Stack <String> camisas= new Stack<>();
+        //camisas.push("Camisa Rosa");
+        //camisas.push("Camisa Verde");
+        //camisas.push("Camisa Azul");
+        String elemento=camisas.peek();
+        System.out.println("La última camisa agregada es:" + elemento);
+        boolean resultado=camisas.empty();
+        for(int i=0; i<=; i++){
+            if(i>0){
+                
+            }
+            else{
+                System.out.println("")
+            }
+        }
+        // while(resultado!=false){
+        //     System.out.println(elemento);
+        // }
+        }
+    }
